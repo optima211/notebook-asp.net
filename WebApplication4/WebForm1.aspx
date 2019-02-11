@@ -6,20 +6,15 @@
 
     <head runat="server">
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
 
     <title>Hello, world!</title>
   </head>
 <body>
-     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
     <form id="form1" runat="server">
             <div class="row">
                 <div class="col-md-12">
@@ -32,9 +27,9 @@
 
             <asp:GridView ID="GridView1" class ="table table-dark" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" InsertVisible="False" SortExpression="Id"></asp:BoundField>
-                    <asp:BoundField DataField="FIO" HeaderText="FIO" SortExpression="FIO"></asp:BoundField>
-                    <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone"></asp:BoundField>
+                    <asp:BoundField DataField="Id" HeaderText="Номер записи" ReadOnly="True" InsertVisible="False" SortExpression="Id"></asp:BoundField>
+                    <asp:BoundField DataField="FIO" HeaderText="Фамилия Имя Отчество" SortExpression="FIO"></asp:BoundField>
+                    <asp:BoundField DataField="phone" HeaderText="Телефон" SortExpression="phone"></asp:BoundField>
                 </Columns>
             </asp:GridView>
             <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [Records]"></asp:SqlDataSource>
@@ -53,7 +48,7 @@
 
                     <div class="row form-group">
                                                     <div class="col-md-12">
-                    <asp:Label ID="Label3" runat="server" Text="Номер"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Номер записи"></asp:Label>
                     <asp:TextBox ID="TextBox3" class="form-control" runat="server"></asp:TextBox>
                     <asp:Button ID="Button2" class="btn btn-primary mt-2" runat="server" Text="Удалить" OnClick="Button2_Click" />
                     <asp:Button ID="Button3" class="btn btn-primary mt-2" runat="server" Text="Редактировать" OnClick="Button3_Click"/>
